@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "344Y82U8L2.app.dope.cards",
+        "paths": [
+          "/refer/*",
+          "/claim/*"
+        ]
+      }
+    ]
+  }
+}
+
+

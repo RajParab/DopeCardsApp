@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Mobile-native base and safe-area helpers */
+:root {
+  color-scheme: light only;
+  --app-bg: #f9fafb; /* slate-50 */
+  --app-fg: #0f172a; /* slate-900 */
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--app-bg);
+  color: var(--app-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: contain;
+}
+
+#root {
+  display: block;
+  min-height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe-area utility classes (usable in className) */
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+.safe-x { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+
+/* Safe-area with minimum base padding fallbacks */
+.safe-x-4 { padding-left: max(env(safe-area-inset-left), 1rem); padding-right: max(env(safe-area-inset-right), 1rem); }
+.safe-x-5 { padding-left: max(env(safe-area-inset-left), 1.25rem); padding-right: max(env(safe-area-inset-right), 1.25rem); }
+.safe-top-2 { padding-top: max(env(safe-area-inset-top), 0.5rem); }
+.safe-top-3 { padding-top: max(env(safe-area-inset-top), 0.75rem); }
+.safe-top-4 { padding-top: max(env(safe-area-inset-top), 1rem); }
+
+/* Prevent background scroll when a modal/bottom-sheet is open */
+.modal-open { overflow: hidden; }
